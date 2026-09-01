@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import API from "../../services/api";
 import { useAuth } from "../../context/AuthContext";
 
 function ParentDashboard() {
@@ -33,11 +33,9 @@ function ParentDashboard() {
     try {
       setLoading(true);
 
-      const res = await axios.get(
-        `http://localhost:5000/api/booking/parent/${encodeURIComponent(
-          user.email
-        )}`
-      );
+    const res = await API.get(
+  `/booking/parent/${encodeURIComponent(user.email)}`
+);
 
       if (res.data.success) {
         setBookings(res.data.bookings || []);
@@ -78,9 +76,9 @@ function ParentDashboard() {
     try {
       setDeletingId(bookingId);
 
-      const res = await axios.delete(
-        `http://localhost:5000/api/booking/${bookingId}`
-      );
+      const res = await API.delete(
+  `/booking/${bookingId}`
+);
 
       if (res.data.success) {
         alert("Booking Cancelled Successfully");
