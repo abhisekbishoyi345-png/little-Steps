@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "src/services/api";
 
 function AdminDashboard() {
   // =================================
@@ -60,9 +60,7 @@ function AdminDashboard() {
     try {
       setLoadingChildcare(true);
 
-      const res = await axios.get(
-        "http://localhost:5000/api/childcare"
-      );
+      const res = await API.get("/childcare");
 
       if (res.data.success) {
         setChildcareCenters(res.data.childcare || []);
@@ -82,9 +80,7 @@ function AdminDashboard() {
     try {
       setLoadingBookings(true);
 
-      const res = await axios.get(
-        "http://localhost:5000/api/booking"
-      );
+      const res = await API.get("/booking");
 
       if (res.data.success) {
         setBookings(res.data.bookings || []);
@@ -129,8 +125,8 @@ function AdminDashboard() {
   // Filter Childcare Centers
   // =================================
 
-  const filteredChildcareCenters =
-    childcareCenters.filter((center) => {
+  const filteredChildcareCenters = childcareCenters.filter(
+    (center) => {
       const search = searchTerm.toLowerCase().trim();
 
       const matchesSearch =
@@ -164,7 +160,8 @@ function AdminDashboard() {
         matchesLocation &&
         matchesPlan
       );
-    });
+    }
+  );
 
   // =================================
   // Clear Filters
@@ -189,14 +186,14 @@ function AdminDashboard() {
 
       if (editingId) {
         // Update Childcare
-        res = await axios.put(
-          `http://localhost:5000/api/childcare/${editingId}`,
+        res = await API.put(
+          `/childcare/${editingId}`,
           formData
         );
       } else {
         // Add Childcare
-        res = await axios.post(
-          "http://localhost:5000/api/childcare/add",
+        res = await API.post(
+          "/childcare/add",
           formData
         );
       }
@@ -264,8 +261,8 @@ function AdminDashboard() {
     if (!confirmed) return;
 
     try {
-      const res = await axios.delete(
-        `http://localhost:5000/api/childcare/${id}`
+      const res = await API.delete(
+        `/childcare/${id}`
       );
 
       if (res.data.success) {
@@ -296,8 +293,8 @@ function AdminDashboard() {
     status
   ) => {
     try {
-      const res = await axios.put(
-        `http://localhost:5000/api/booking/${bookingId}/status`,
+      const res = await API.put(
+        `/booking/${bookingId}/status`,
         { status }
       );
 
@@ -619,15 +616,11 @@ function AdminDashboard() {
 
           </div>
 
-          {/* =================================
-              SEARCH & FILTERS
-          ================================= */}
+          {/* SEARCH & FILTERS */}
 
           <div className="bg-white rounded-xl shadow-md p-5 mb-6">
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-
-              {/* Search */}
 
               <input
                 type="text"
@@ -639,8 +632,6 @@ function AdminDashboard() {
                 className="border p-3 rounded-lg w-full"
               />
 
-              {/* Age Filter */}
-
               <input
                 type="text"
                 placeholder="Filter by age group"
@@ -651,8 +642,6 @@ function AdminDashboard() {
                 className="border p-3 rounded-lg w-full"
               />
 
-              {/* Location Filter */}
-
               <input
                 type="text"
                 placeholder="Filter by location"
@@ -662,8 +651,6 @@ function AdminDashboard() {
                 }
                 className="border p-3 rounded-lg w-full"
               />
-
-              {/* Plan Filter */}
 
               <input
                 type="text"
@@ -701,9 +688,7 @@ function AdminDashboard() {
             </div>
           </div>
 
-          {/* =================================
-              CHILDCARE LIST
-          ================================= */}
+          {/* CHILDCARE LIST */}
 
           {loadingChildcare ? (
 
@@ -808,9 +793,7 @@ function AdminDashboard() {
 
                         <button
                           onClick={() =>
-                            handleDelete(
-                              center._id
-                            )
+                            handleDelete(center._id)
                           }
                           className="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg font-semibold"
                         >
@@ -1020,6 +1003,7 @@ function AdminDashboard() {
 
                 </div>
               ))}
+
             </div>
           )}
 
