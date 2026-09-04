@@ -24,10 +24,12 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "https://little-steps-phi.vercel.app",
       "https://client-three-ules-63.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
