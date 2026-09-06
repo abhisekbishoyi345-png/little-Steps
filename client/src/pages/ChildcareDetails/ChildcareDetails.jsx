@@ -87,7 +87,7 @@ function ChildcareDetails() {
 
             <div className="bg-gray-50 p-5 rounded-xl">
               <h3 className="font-bold text-lg">Price</h3>
-              <p className="text-blue-600 font-bold text-2xl">
+              <p className="text-green-600 font-bold text-2xl">
                 ₹{center.price}
               </p>
             </div>
@@ -122,7 +122,7 @@ function ChildcareDetails() {
 
           <button
             onClick={() => navigate(`/booking/${center._id}`)}
-            className="mt-10 w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl text-lg font-bold"
+            className="mt-10 w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl text-lg font-bold"
           >
             Book Now
           </button>

@@ -191,7 +191,7 @@ function FeaturedCenters({ filters = {} }) {
             <>
               <div className="mb-6 text-gray-600">
                 Found{" "}
-                <span className="font-bold text-blue-600">
+                <span className="font-bold text-green-600">
                   {centers.length}
                 </span>{" "}
                 childcare{" "}
@@ -311,7 +311,7 @@ function FeaturedCenters({ filters = {} }) {
                       </div>
 
                       {/* Price */}
-                      <p className="text-blue-600 font-bold text-2xl mt-4">
+                      <p className="text-green-600 font-bold text-2xl mt-4">
                         ₹{center.price}
                       </p>
 
@@ -366,7 +366,7 @@ function FeaturedCenters({ filters = {} }) {
                       {/* Details */}
                       <Link
                         to={`/childcare/${center._id}`}
-                        className="block mt-6 w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition"
+                        className="block mt-6 w-full text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition"
                       >
                         View Details
                       </Link>

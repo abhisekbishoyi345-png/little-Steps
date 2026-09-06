@@ -349,12 +349,12 @@ function AdminDashboard() {
             ADMIN HEADER
         ================================= */}
 
-        <div className="bg-blue-600 text-white rounded-2xl p-6 mb-8 shadow-lg">
+        <div className="bg-green-600 text-white rounded-2xl p-6 mb-8 shadow-lg">
           <h1 className="text-3xl font-bold">
             Admin Dashboard
           </h1>
 
-          <p className="mt-1 text-blue-100">
+          <p className="mt-1 text-green-100">
             Manage childcare centers and booking
             requests
           </p>
@@ -368,7 +368,7 @@ function AdminDashboard() {
 
           {/* Total Childcare */}
 
-          <div className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-blue-600">
+          <div className="bg-white rounded-2xl shadow-md p-6 border-l-4 border-green-600">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-500 text-sm font-medium">
@@ -380,7 +380,7 @@ function AdminDashboard() {
                 </h3>
               </div>
 
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">
                 🏫
               </div>
             </div>
@@ -474,7 +474,7 @@ function AdminDashboard() {
 
         <div className="bg-white shadow-xl rounded-xl p-8 mb-10">
 
-          <h2 className="text-3xl font-bold text-center text-blue-600 mb-8">
+          <h2 className="text-3xl font-bold text-center text-green-600 mb-8">
             {editingId
               ? "Edit Childcare Center"
               : "Add Childcare Center"}
@@ -568,7 +568,7 @@ function AdminDashboard() {
 
               <button
                 type="submit"
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold"
+                className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold"
               >
                 {editingId
                   ? "Update Childcare"
@@ -680,7 +680,7 @@ function AdminDashboard() {
 
               <button
                 onClick={clearFilters}
-                className="text-blue-600 hover:text-blue-800 font-semibold"
+                className="text-green-600 hover:text-green-800 font-semibold"
               >
                 Clear Filters
               </button>
@@ -714,7 +714,7 @@ function AdminDashboard() {
 
               <button
                 onClick={clearFilters}
-                className="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg"
+                className="mt-4 bg-green-600 text-white px-5 py-2 rounded-lg"
               >
                 Clear Filters
               </button>
@@ -772,7 +772,7 @@ function AdminDashboard() {
                         {center.plan}
                       </p>
 
-                      <p className="text-blue-600 font-bold text-lg mt-2">
+                      <p className="text-green-600 font-bold text-lg mt-2">
                         ₹{center.price}
                       </p>
 

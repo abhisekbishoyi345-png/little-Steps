@@ -89,7 +89,7 @@ function Login() {
       <div className="bg-white w-full max-w-md rounded-xl shadow-lg p-8">
 
         {/* Heading */}
-        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
+        <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
           Login
         </h2>
 
@@ -110,7 +110,7 @@ function Login() {
               placeholder="Enter Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
               required
             />
           </div>
@@ -127,7 +127,7 @@ function Login() {
               placeholder="Enter Password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
               required
             />
           </div>
@@ -142,7 +142,7 @@ function Login() {
               name="role"
               value={formData.role}
               onChange={handleChange}
-              className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="parent">Parent</option>
               <option value="provider">Provider</option>
@@ -154,7 +154,7 @@ function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white py-3 rounded-lg font-semibold transition"
+            className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white py-3 rounded-lg font-semibold transition"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
@@ -167,7 +167,7 @@ function Login() {
 
           <Link
             to="/register"
-            className="text-blue-600 ml-1 font-semibold"
+            className="text-green-600 ml-1 font-semibold"
           >
             Register
           </Link>

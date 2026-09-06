@@ -39,7 +39,7 @@ function Navbar() {
 
         <Link
           to="/"
-          className="text-2xl md:text-3xl font-extrabold text-blue-600"
+          className="text-2xl md:text-3xl font-extrabold text-green-600"
         >
           Little Steps
         </Link>
@@ -50,14 +50,14 @@ function Navbar() {
 
           <Link
             to="/"
-            className="hover:text-blue-600 transition"
+            className="hover:text-green-600 transition"
           >
             Home
           </Link>
 
           <Link
             to="/search"
-            className="hover:text-blue-600 transition"
+            className="hover:text-green-600 transition"
           >
             Search
           </Link>
@@ -67,7 +67,7 @@ function Navbar() {
           {user && (
             <Link
               to={getDashboardPath()}
-              className="hover:text-blue-600 transition font-semibold"
+              className="hover:text-green-600 transition font-semibold"
             >
               Dashboard
             </Link>
@@ -75,14 +75,14 @@ function Navbar() {
 
           <a
             href="#about"
-            className="hover:text-blue-600 transition"
+            className="hover:text-green-600 transition"
           >
             About
           </a>
 
           <a
             href="#contact"
-            className="hover:text-blue-600 transition"
+            className="hover:text-green-600 transition"
           >
             Contact
           </a>
@@ -113,7 +113,7 @@ function Navbar() {
 
             <Link
               to={getDashboardPath()}
-              className="hidden sm:block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition"
+              className="hidden sm:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition"
             >
               Dashboard
             </Link>
@@ -135,14 +135,14 @@ function Navbar() {
 
             <Link
               to="/login"
-              className="px-4 md:px-5 py-2 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50 transition"
+              className="px-4 md:px-5 py-2 rounded-lg border border-green-600 text-green-600 hover:bg-green-50 transition"
             >
               Login
             </Link>
 
             <Link
               to="/register"
-              className="px-4 md:px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+              className="px-4 md:px-5 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
             >
               Register
             </Link>

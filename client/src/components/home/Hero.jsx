@@ -17,13 +17,13 @@ function Hero() {
 
         <div className="max-w-3xl">
 
-          <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full mb-5 text-sm font-semibold">
+          <span className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mb-5 text-sm font-semibold">
             Trusted Childcare Platform
           </span>
 
           <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
             Find the Best
-            <span className="text-blue-400"> Childcare </span>
+            <span className="text-green-400"> Childcare </span>
             Near You
           </h1>
 
@@ -37,7 +37,7 @@ function Hero() {
 
             <Link
               to="/search"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold transition"
             >
               Explore Centers
             </Link>

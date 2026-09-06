@@ -138,7 +138,7 @@ function ParentDashboard() {
 
       {/* HEADER */}
 
-      <div className="bg-blue-600 text-white p-6 shadow-lg">
+      <div className="bg-green-600 text-white p-6 shadow-lg">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
           <div>
@@ -146,7 +146,7 @@ function ParentDashboard() {
               Parent Dashboard
             </h1>
 
-            <p className="mt-1 text-blue-100">
+            <p className="mt-1 text-green-100">
               Welcome, {user?.fullName || "Parent"} 👋
             </p>
           </div>
@@ -224,7 +224,7 @@ function ParentDashboard() {
 
           <div className="flex items-center gap-3">
 
-            <span className="bg-blue-100 text-blue-700 px-5 py-2 rounded-full font-semibold">
+            <span className="bg-green-100 text-green-700 px-5 py-2 rounded-full font-semibold">
               {bookings.length}{" "}
               {bookings.length === 1
                 ? "Booking"
@@ -277,7 +277,7 @@ function ParentDashboard() {
 
             <button
               onClick={() => navigate("/search")}
-              className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
+              className="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold"
             >
               Find Childcare
             </button>
@@ -424,7 +424,7 @@ function ParentDashboard() {
 
                   {booking.specialRequest && (
 
-                    <div className="mt-4 bg-blue-50 rounded-xl p-4">
+                    <div className="mt-4 bg-green-50 rounded-xl p-4">
 
                       <p className="text-gray-500 text-sm">
                         Special Request
@@ -448,7 +448,7 @@ function ParentDashboard() {
                         Childcare Price
                       </span>
 
-                      <span className="text-xl font-bold text-blue-600">
+                      <span className="text-xl font-bold text-green-600">
                         ₹{booking.childcareId.price}
                       </span>
 

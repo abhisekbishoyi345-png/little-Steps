@@ -963,7 +963,7 @@ function ProviderDashboard() {
           HEADER
       ===================================== */}
 
-      <div className="bg-blue-600 text-white shadow-lg">
+      <div className="bg-green-600 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
           <div>
@@ -971,7 +971,7 @@ function ProviderDashboard() {
               Provider Dashboard
             </h1>
 
-            <p className="text-blue-100 mt-1">
+            <p className="text-green-100 mt-1">
               Welcome,{" "}
               {user?.fullName || "Provider"} 👋
             </p>
@@ -1049,7 +1049,7 @@ function ProviderDashboard() {
               Total Bookings
             </p>
 
-            <h3 className="text-3xl font-bold text-blue-600 mt-2">
+            <h3 className="text-3xl font-bold text-green-600 mt-2">
               {bookings.length}
             </h3>
           </div>
@@ -1092,7 +1092,7 @@ function ProviderDashboard() {
 
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-10">
 
-          <h2 className="text-3xl font-bold text-blue-600 mb-7 text-center">
+          <h2 className="text-3xl font-bold text-green-600 mb-7 text-center">
             {editingId
               ? "Edit Childcare Center"
               : "Add Childcare Center"}
@@ -1308,7 +1308,7 @@ function ProviderDashboard() {
 
               </div>
 
-              <div className="mt-5 bg-blue-50 border border-blue-100 rounded-xl p-4">
+              <div className="mt-5 bg-green-50 border border-green-100 rounded-xl p-4">
 
                 <label className="flex items-center gap-3 cursor-pointer">
 
@@ -1557,7 +1557,7 @@ function ProviderDashboard() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white py-3 rounded-lg font-semibold transition"
+                className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white py-3 rounded-lg font-semibold transition"
               >
                 {submitting
                   ? "Saving..."
@@ -1602,7 +1602,7 @@ function ProviderDashboard() {
 
             <div className="flex items-center gap-3">
 
-              <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">
+              <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
                 {childcareCenters.length}{" "}
                 {childcareCenters.length === 1
                   ? "Center"
@@ -1717,7 +1717,7 @@ function ProviderDashboard() {
                       )}
 
                       {center.verified && (
-                        <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
                           ✓ Verified
                         </span>
                       )}
@@ -1761,7 +1761,7 @@ function ProviderDashboard() {
                         {center.availableSlots ?? "N/A"}
                       </p>
 
-                      <p className="text-blue-600 font-bold text-lg">
+                      <p className="text-green-600 font-bold text-lg">
                         ₹{center.price}
                       </p>
 
@@ -2146,7 +2146,7 @@ function ProviderDashboard() {
 
                     {booking.specialRequest && (
 
-                      <div className="mt-4 bg-blue-50 border border-blue-100 p-4 rounded-xl">
+                      <div className="mt-4 bg-green-50 border border-green-100 p-4 rounded-xl">
 
                         <p className="font-bold">
                           Special Request

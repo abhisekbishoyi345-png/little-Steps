@@ -183,7 +183,7 @@ function BookingForm() {
 
         <button
           onClick={() => navigate(-1)}
-          className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
+          className="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold"
         >
           Go Back
         </button>
@@ -238,12 +238,12 @@ function BookingForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
 
-              <div className="bg-blue-50 rounded-xl p-4">
+              <div className="bg-green-50 rounded-xl p-4">
                 <p className="text-sm text-gray-500">
                   Available Slots
                 </p>
 
-                <p className="text-2xl font-bold text-blue-600">
+                <p className="text-2xl font-bold text-green-600">
                   {center.availableSlots}
                 </p>
               </div>
@@ -300,7 +300,7 @@ function BookingForm() {
                           Hourly
                         </p>
 
-                        <p className="text-xl font-bold text-blue-600">
+                        <p className="text-xl font-bold text-green-600">
                           ₹{center.pricingPlans.hourly}
                         </p>
                       </div>
@@ -313,7 +313,7 @@ function BookingForm() {
                           Daily
                         </p>
 
-                        <p className="text-xl font-bold text-blue-600">
+                        <p className="text-xl font-bold text-green-600">
                           ₹{center.pricingPlans.daily}
                         </p>
                       </div>
@@ -326,7 +326,7 @@ function BookingForm() {
                           Monthly
                         </p>
 
-                        <p className="text-xl font-bold text-blue-600">
+                        <p className="text-xl font-bold text-green-600">
                           ₹{center.pricingPlans.monthly}
                         </p>
                       </div>
@@ -345,7 +345,7 @@ function BookingForm() {
 
         <div className="bg-white rounded-2xl shadow-xl p-8">
 
-          <h2 className="text-3xl font-bold text-center text-blue-600">
+          <h2 className="text-3xl font-bold text-center text-green-600">
             Book Childcare
           </h2>
 
@@ -426,7 +426,7 @@ function BookingForm() {
                 placeholder="Enter Mobile Number"
                 value={formData.mobile}
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -444,7 +444,7 @@ function BookingForm() {
                 placeholder="Enter Child Name"
                 value={formData.childName}
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -464,7 +464,7 @@ function BookingForm() {
                 max="18"
                 value={formData.childAge}
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -486,7 +486,7 @@ function BookingForm() {
                     .toISOString()
                     .split("T")[0]
                 }
-                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
             </div>
@@ -502,7 +502,7 @@ function BookingForm() {
                 name="timing"
                 value={formData.timing}
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               >
                 <option value="">
@@ -544,7 +544,7 @@ function BookingForm() {
                 rows="4"
                 value={formData.specialRequest}
                 onChange={handleChange}
-                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
@@ -553,7 +553,7 @@ function BookingForm() {
             <button
               type="submit"
               disabled={loading || isUnavailable}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold transition"
+              className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold transition"
             >
               {loading
                 ? "Creating Booking..."

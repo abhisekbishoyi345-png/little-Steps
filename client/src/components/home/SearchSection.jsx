@@ -80,7 +80,7 @@ function SearchSection({ onSearch }) {
                 value={filters.search}
                 onChange={handleChange}
                 placeholder="Name, location or keyword"
-                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none"
               />
             </div>
 
@@ -96,7 +96,7 @@ function SearchSection({ onSearch }) {
                 value={filters.location}
                 onChange={handleChange}
                 placeholder="Enter city or location"
-                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none"
               />
             </div>
 
@@ -189,7 +189,7 @@ function SearchSection({ onSearch }) {
                 value={filters.minPrice}
                 onChange={handleChange}
                 placeholder="₹ Min"
-                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none"
               />
             </div>
 
@@ -206,7 +206,7 @@ function SearchSection({ onSearch }) {
                 value={filters.maxPrice}
                 onChange={handleChange}
                 placeholder="₹ Max"
-                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full mt-2 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none"
               />
             </div>
 
@@ -235,7 +235,7 @@ function SearchSection({ onSearch }) {
 
             <button
               onClick={handleSearch}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition"
             >
               🔍 Search Childcare
             </button>
