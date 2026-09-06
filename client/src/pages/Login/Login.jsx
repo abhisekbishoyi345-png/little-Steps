@@ -35,28 +35,24 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://little-steps-1-5fwg.onrender.com/api/auth/login",
         {
           email: formData.email,
           password: formData.password,
         }
       );
 
+      console.log("LOGIN RESPONSE:", res.data);
+
       if (res.data.success) {
         const user = res.data.user;
 
-        // ==============================
-        // Debug Information
-        // ==============================
-        console.log("================================");
-        console.log("LOGIN RESPONSE:", res.data);
         console.log("LOGGED IN USER:", user);
         console.log("USER EMAIL:", user.email);
         console.log("USER ROLE:", user.role);
         console.log("TOKEN:", res.data.token);
-        console.log("================================");
 
-        // Save user + token
+        // Save user and token
         login(user, res.data.token);
 
         alert("Login Successful! 🎉");
@@ -66,27 +62,18 @@ function Login() {
         // ==============================
 
         if (user.role === "admin") {
-          console.log("➡️ Redirecting to Admin Dashboard");
           navigate("/admin-dashboard");
-        } 
-        
-        else if (user.role === "provider") {
-          console.log("➡️ Redirecting to Provider Dashboard");
+        } else if (user.role === "provider") {
           navigate("/provider-dashboard");
-        } 
-        
-        else if (user.role === "parent") {
-          console.log("➡️ Redirecting to Parent Dashboard");
+        } else if (user.role === "parent") {
           navigate("/parent-dashboard");
-        } 
-        
-        else {
-          console.log("⚠️ Unknown role:", user.role);
+        } else {
           alert("Invalid user role");
         }
       }
     } catch (err) {
       console.log("LOGIN ERROR:", err);
+      console.log("SERVER RESPONSE:", err.response?.data);
 
       alert(
         err.response?.data?.message ||
@@ -99,11 +86,9 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-
       <div className="bg-white w-full max-w-md rounded-xl shadow-lg p-8">
 
         {/* Heading */}
-
         <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
           Login
         </h2>
@@ -113,10 +98,7 @@ function Login() {
           onSubmit={handleSubmit}
         >
 
-          {/* ==============================
-              Email
-          ============================== */}
-
+          {/* Email */}
           <div>
             <label className="block mb-2 font-semibold">
               Email
@@ -133,10 +115,7 @@ function Login() {
             />
           </div>
 
-          {/* ==============================
-              Password
-          ============================== */}
-
+          {/* Password */}
           <div>
             <label className="block mb-2 font-semibold">
               Password
@@ -153,10 +132,7 @@ function Login() {
             />
           </div>
 
-          {/* ==============================
-              Login As
-          ============================== */}
-
+          {/* Login As */}
           <div>
             <label className="block mb-2 font-semibold">
               Login As
@@ -168,24 +144,13 @@ function Login() {
               onChange={handleChange}
               className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="parent">
-                Parent
-              </option>
-
-              <option value="provider">
-                Provider
-              </option>
-
-              <option value="admin">
-                Admin
-              </option>
+              <option value="parent">Parent</option>
+              <option value="provider">Provider</option>
+              <option value="admin">Admin</option>
             </select>
           </div>
 
-          {/* ==============================
-              Login Button
-          ============================== */}
-
+          {/* Login Button */}
           <button
             type="submit"
             disabled={loading}
@@ -197,7 +162,6 @@ function Login() {
         </form>
 
         {/* Register */}
-
         <p className="text-center mt-5">
           Don't have an account?
 
@@ -210,7 +174,6 @@ function Login() {
         </p>
 
       </div>
-
     </div>
   );
 }
