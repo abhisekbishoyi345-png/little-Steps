@@ -12,7 +12,7 @@ function ProviderDashboard() {
   const user = JSON.parse(localStorage.getItem("user"));
   const token = localStorage.getItem("token");
 
-  const API_URL = "http://localhost:5000/api";
+ const API_URL = "https://little-steps-1-5fwg.onrender.com/api";
 
   // =====================================
   // Initial Form
@@ -918,20 +918,20 @@ function ProviderDashboard() {
   // Image URL
   // =====================================
 
-  const getImageUrl = (imagePath) => {
-    if (!imagePath) {
-      return "";
-    }
+ const getImageUrl = (imagePath) => {
+  if (!imagePath) {
+    return "";
+  }
 
-    if (
-      imagePath.startsWith("http://") ||
-      imagePath.startsWith("https://")
-    ) {
-      return imagePath;
-    }
+  if (
+    imagePath.startsWith("http://") ||
+    imagePath.startsWith("https://")
+  ) {
+    return imagePath;
+  }
 
-    return `http://localhost:5000${imagePath}`;
-  };
+  return `https://little-steps-1-5fwg.onrender.com${imagePath}`;
+};
 
   // =====================================
   // Booking Statistics

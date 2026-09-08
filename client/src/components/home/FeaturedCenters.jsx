@@ -93,19 +93,19 @@ function FeaturedCenters({ filters = {} }) {
   };
 
   const getImageUrl = (imagePath) => {
-    if (!imagePath) {
-      return "";
-    }
+  if (!imagePath) {
+    return "";
+  }
 
-    if (
-      imagePath.startsWith("http://") ||
-      imagePath.startsWith("https://")
-    ) {
-      return imagePath;
-    }
+  if (
+    imagePath.startsWith("http://") ||
+    imagePath.startsWith("https://")
+  ) {
+    return imagePath;
+  }
 
-    return `http://localhost:5000${imagePath}`;
-  };
+  return `https://little-steps-1-5fwg.onrender.com${imagePath}`;
+};
 
   return (
     <section className="py-20 bg-gray-50">
